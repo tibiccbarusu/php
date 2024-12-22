@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログインフォーム</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ログインフォーム</h1>
+        <div class="form-container">
+            <button id="createAccountButton">新規アカウント作成</button>
+            <form id="loginForm" method="POST" action="login.php">
+                <label for="username">アカウント名</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">パスワード</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">ログイン</button>
+            </form>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

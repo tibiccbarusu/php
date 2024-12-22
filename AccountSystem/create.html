@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規アカウント作成</title>
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+    <div class="container">
+        <h1>新規アカウント作成</h1>
+        <form id="createAccountForm" method="POST" action="create.php">
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="username">アカウント名 (英数字のみ)</label>
+            <input type="text" id="username" name="username" pattern="[0-9a-zA-Z]+" required>
+
+            <label for="password">パスワード (5文字以上)</label>
+            <input type="password" id="password" name="password" pattern="[0-9a-zA-Z]{5,}" required>
+
+            <label for="confirmPassword">パスワード確認</label>
+            <input type="password" id="confirmPassword" required>
+
+            <label for="lastName">姓</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="firstName">名</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="kanaLastName">フリガナ (姓)</label>
+            <input type="text" id="kanaLastName" name="kanaLastName" required>
+
+            <label for="kanaFirstName">フリガナ (名)</label>
+            <input type="text" id="kanaFirstName" name="kanaFirstName" required>
+
+            <label for="gender">性別</label>
+            <select id="gender" name="gender" required>
+                <option value="male">男性</option>
+                <option value="female">女性</option>
+                <option value="other">その他</option>
+            </select>
+
+            <label for="birthDate">生年月日</label>
+            <input type="date" id="birthDate" name="birthDate" required>
+
+            <label for="phone">電話番号</label>
+            <input type="tel" id="phone" name="phone" pattern="\d{10,11}" required>
+
+            <label for="postalCode">郵便番号</label>
+            <input type="text" id="postalCode" name="postalCode" pattern="\d{7}" required>
+            <button type="button" id="searchAddress">住所検索</button>
+
+            <label for="prefecture">都道府県</label>
+            <input type="text" id="prefecture" name="prefecture" required>
+
+            <label for="city">市町村</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="addressDetail">番地以下</label>
+            <input type="text" id="addressDetail" name="addressDetail" required>
+
+            <button type="submit">アカウント作成</button>
+        </form>
+        <p id="errorMessage"></p>
+    </div>
+    <script src="create.js"></script>
+</body>
+</html>

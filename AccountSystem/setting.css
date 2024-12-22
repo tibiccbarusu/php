@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-y: auto; /* 縦スクロールを許可 */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%; /* デバイスサイズに適応 */
+    max-width: 500px; /* 最大幅を指定 */
+    margin: 20px auto; /* 上下マージンを追加 */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em; /* 見出しを強調 */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 70vh; /* 最大高さを指定 */
+    overflow-y: auto; /* フォームにスクロールバーを追加 */
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 1em;
+    width: 100%; /* 要素を横いっぱいに広げる */
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
